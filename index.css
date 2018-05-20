@@ -1,0 +1,236 @@
+body {
+    font-size: 28px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+li {
+    float: left;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: gray;
+    background:rgba(255,255,255,0.3);
+    font-family: 'Patua One', cursive;
+    font-weight: light;
+}
+
+/*li a:hover {
+    background-color: #fc9031;
+}*/
+
+.active {
+    background-color: #fcc932;
+    color: black;
+    background:rgba(255,255,255,0.9);
+    font-family: 'Patua One', cursive;
+}
+
+.busbackground{
+    padding-left: 40vw;
+    padding-right: 40vw;
+    padding-top: 30vh;
+    padding-bottom: 70vh;
+    background-image: url('images/toy_bus.jpg');
+    background-repeat: repeat-x;
+    color: rgb(255,255,255);
+}
+
+h1{
+    font-family: 'Knewave', cursive;
+    font-weight: bolder;
+    font-size: x-large;
+    color: #eaeaea;
+}
+
+#transparent{
+    background-color: rgba(255,255,255,0.6);
+}
+
+#black{
+    color: black;
+}
+
+h4{
+    color:green;
+}
+
+.thumbnail{
+    font-family: 'Patua One', cursive;
+    font-weight: bolder;
+    border-color: gray;
+    background-image: url('images/9.jpg');
+    border-width: 5px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.space{
+    padding-top: 500px;
+}
+
+p{
+    font-family: 'Patua One', cursive;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+h2{
+    font-family: 'Knewave', cursive;
+}
+
+.containerbackground{
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-family: 'Patua One', cursive;
+    background:rgba(255,255,255,0.7);
+}
+
+.fixborder{
+    border-radius:0px;
+}
+
+.jumbotron{
+    background-image: url('images/toy_bus.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paddingcorrect{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.introsize{
+    font-size: large;
+}
+
+.imgCircle{
+    border-radius: 50%;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.fontfix{
+    font-family: 'Knewave', cursive;
+}
+
+.w3-animate-bottom{
+    position:relative;
+    animation:animatebottom 0.4s}
+
+@keyframes animatebottom{
+    from{bottom:-300px;
+    opacity:0} to{bottom:0;opacity:1}}
+
+.tocenter{
+    text-align:center!important}
+    
+.w3-animate-left{
+    position:relative;
+    animation:animateleft 0.4s}
+@keyframes animateleft{
+    from{left:-300px;
+    opacity:0} to{left:0;opacity:1}}
+    
+.w3-animate-right{
+    position:relative;
+    animation:animateright 0.4s}
+@keyframes animateright{
+    from{right:-300px;
+    opacity:0} to{right:0;opacity:1}}
+ 
+.w3-animate-bottom2{
+    position:relative;
+    animation:animatebottom 0.8}
+  
+.titler{
+    font-family: 'Bitter', serif;
+    font-weight: bold;
+}
+
+.increasefonth2{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.backgroundcolor2{
+    background-color: #686868;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-family: 'Patua One', cursive;
+}
+
+.paddingbottombooster{
+    padding-bottom: 60px;
+}
+
+.paddingtopbooster{
+    padding-top: 20px;
+}
+
+.paddingdecreaser{
+    margin-right: 45px;
+    margin-left: 45px;
+}
+
+.spacing{
+    margin-left: 20px;
+}
+
+.pushdown{
+    margin-top: 320px;
+}
+
+.w3-animate-opacity{
+    animation:opac 0.8s}
+@keyframes opac{
+    from{opacity:0} to{opacity:1}}
+    
+.imagepaddingcorrect{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.fontcolorfix{
+    color: black;
+    font-family: 'Patua One', cursive;
+    font-size: smaller;
+}
+
+.imgRound{
+    border-radius: 10%;
+}
+
+.transparency{
+    background:rgba(255,255,255,0.4);
+}
+
+.forimages{
+    margin-left: 100px;
+    padding-right:50px;
+}
+
+.fixerprototype{
+    margin-left: 27.5vw;
+}

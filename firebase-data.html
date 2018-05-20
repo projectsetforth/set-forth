@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    
+    <script src='../firebase/firebase.js'></script>
+    
+    <head>
+        <title>Set Forth</title>
+        <meta charset="utf-8">
+        <link href="bootstrap-3.3.7-dist/css/bootstrap.css" type ="text/css" rel="stylesheet"/>
+        <title>Set Forth!</title>
+        <link href="index.css" type ="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    </head>
+    
+    <body>
+        <nav class="navbar animated navbar-light navbar-fixed-top noBottomNargin homeNavbar">
+            <div class="container-fluid">
+           
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fas fa-caret-down black"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse transparent" id="myNavbar">
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">The Team</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+        <section class="jumbotron">
+        <section class="container containerbackground paddingcorrect">
+        <h1 class="whitefont">
+            <center class="container containerbackground paddingcorrect" id="display">
+            Fetching data . . .
+            </center>
+        </h1>
+        </section>
+        </section>
+        
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCsw51LzI3LqiJr1wPvdsQ_EGMv51cWuZA",
+                authDomain: "ep-database-d7dce.firebaseapp.com",
+                databaseURL: "https://ep-database-d7dce.firebaseio.com",
+                projectId: "ep-database-d7dce",
+                storageBucket: "ep-database-d7dce.appspot.com",
+                messagingSenderId: "260192294729"
+            };
+            
+            firebase.initializeApp(config);
+            
+            //Reference to the branch of the database we need
+            var rootRef = firebase.database().ref('seated/');
+            
+            //Read the data and alert the user on the condition of the seat
+            rootRef.on('value', function(snapshot){
+                var val = snapshot.val()
+                val = val.seat1
+                if(val == 'false'){
+                    document.getElementById("display").innerHTML = "Seat's Empty";
+                } else{
+                    document.getElementById("display").innerHTML = "Someone's sitting there";
+                }
+            })
+        </script>
+        <section>
+           <footer class="container ">
+              <div class="row">
+                 <div class=" col-sm">
+                    <a href="mailto:projectsetforth@gmail.com" class="fontcolorfix"> <img border="0" src="images/nice.png" width="100">
+                    projectsetforth@gmail.com</a>
+                 </div>
+                 <div class="col-sm">
+                     <p>
+                         Designed using HTML5 | Current status: Unreleased | Dublin, California
+                     </p>
+                 </div>
+              </div>
+           </footer>
+        </section>
+    </body>
+</html>
